@@ -1,0 +1,306 @@
+div.items-container {
+    margin-top:65px;
+}
+div.items-container div.item {
+    margin-bottom:35px;
+}
+.images {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.images img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition:all 0.5s ease;
+}
+.images .mask {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.images .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.images .buttons .icon {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    position: relative;
+    -webkit-transition: all 0.3s, color 0.1s 0.3s;
+    -moz-transition: all 0.3s, color 0.1s 0.3s;
+    -o-transition: all 0.3s, color 0.1s 0.3s;
+    transition: all 0.3s, color 0.1s 0.3s;
+    color: transparent;
+}
+.images .buttons .icon-picture {
+    left: 22px;
+}
+.images .buttons .icon-video {
+    left: -22px;
+}
+.images:hover .buttons .icon {
+    opacity: 1;
+    left: 0;
+    color: rgba(50, 50, 50, 0.9);
+}
+.images:hover .mask {
+    opacity: 1;
+}
+.images:hover img{
+    -webkit-transform: scale(1.15,1.15);
+    -moz-transform: scale(1.15,1.15);
+    -ms-transform: scale(1.15,1.15);
+    -o-transform: scale(1.15,1.15);
+    transform: scale(1.15,1.15);
+}
+.icon-picture{
+    background:url(../img/svg/picture.svg) no-repeat center center;
+    background-size: 75%;
+}
+.icon-video{
+    background:url(../img/svg/video.svg) no-repeat center center;
+    background-size: 60%;
+}
+.images .desp {
+    position:absolute;
+    top:83%;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    color:#fff;
+    font-size:18px;
+    font-family:微软雅黑;
+    background:rgba(0,0,0,0.5);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1500;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    height:576px;
+    overflow:hidden;
+    max-width: 1024px;
+    background-color:transparent;
+}
+
+/* Add Animation */
+.modal-content{
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.8s;
+    animation-name: zoom;
+    animation-duration: 0.8s;
+}
+.close-btn:hover{
+    -webkit-animation-name: hover-rotate;
+    -webkit-animation-duration: 0.3s;
+    animation-name: hover-rotate;
+    animation-duration: 0.3s;
+}
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0.75);}
+    to {-webkit-transform: scale(1);}
+}
+@keyframes zoom {
+    from {transform: scale(0.75);}
+    to {transform: scale(1);}
+}
+@-webkit-keyframes hover-rotate {
+    from{ transform: rotate(0deg);}
+    to{transform: rotate(90deg);}
+}
+@keyframes hover-rotate {
+    from{ transform: rotate(0deg);}
+    to{transform: rotate(180deg);}
+}
+
+/* The Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight:lighter;
+    transition: 0.4s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+#img-container,#video-container {
+    width:100%;
+}
+#pic-list {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+#pic-list img {
+    display:block;
+    width: 100%;
+    height: 100%;
+    margin-bottom:50px;
+}
+
+#buttons {
+    height: 20px;
+    width: 132px;
+    margin: 10px auto;
+    text-align:center;
+    z-index: 5;
+}
+#buttons span {
+    float: left;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    line-height:19px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    color:#fff;
+    text-align:center;
+    font-size:10px;
+    font-family:微软雅黑;
+}
+#buttons span:last-child {
+    margin-right:0;
+}
+#buttons span:first-child,#buttons span:last-child {
+    margin-top:5px;
+    width: 10px;
+    height: 10px;
+}
+
+#buttons .on {
+    background: orangered;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 240px;
+    z-index: 4;
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    border-radius:50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.arrow-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#img-container:hover .arrow-btn {
+    display: block;
+}
+#img-container a {
+    text-decoration:none;
+    outline:none;
+}
+#img-container a:hover,#img-container a:visited {
+    color:#fff;
+}
+#prev {
+    left:10px;
+}
+
+#next {
+    right: 10px;
+}
+#video-container img{
+    position:absolute;
+    top:272px;
+    left:495px;
+    display:inline-block;
+    width:32px;
+    height:32px;
+    -webkit-animation-name:showLoading;
+    -moz-animation-name: showLoading;
+    -o-animation-name: showLoading;
+    animation-name: showLoading;
+    -webkit-animation-duration: 1.75s;
+    -moz-animation-duration: 1.75s;
+    -o-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+}
+@keyframes showLoading {
+    from {
+        display: none;
+    }
+    to {
+        display:inline-block;
+    }
+}
+#video-container embed {
+    width:1022px;
+    height:575px;
+}

@@ -1,0 +1,979 @@
+.container {
+    margin-top: 65px;
+}
+.container .music {
+    width:365px;
+    height:100px;
+    margin:0 22px 12px 0;
+    border:1px solid gray;
+    background-color:#eee;
+}
+.container .music-right {
+    margin-right:0;
+}
+.container h4 {
+    color:#eee;
+    font-size:2em;
+}
+.container .music dl {
+    margin-left:-12px;
+    vertical-align:middle;
+}
+.container .music dl dt{
+    width:94px;
+    height:94px;
+    display:inline-block;
+    float:left;
+    margin-top:2px;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    overflow:hidden;
+    background-clip:border-box;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+dt#music-bg-01 {
+    background:url(../img/cover/music/7AND5.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-02 {
+    background:url(../img/cover/music/great-morning.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-03 {
+    background:url(../img/cover/music/fade.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-04 {
+    background:url(../img/cover/music/moon-flow.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-05 {
+    background:url(../img/cover/music/city-of-twilight.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-06 {
+    background:url(../img/cover/music/peace-moon.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-07 {
+    background:url(../img/cover/music/梁祝.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-08 {
+    background:url(../img/cover/music/临安初雨.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-09 {
+    background:url(../img/cover/music/冰菊物语.jpg) no-repeat center center;
+    background-size:94px 94px;
+}
+dt#music-bg-01:hover,
+dt#music-bg-02:hover,
+dt#music-bg-03:hover,
+dt#music-bg-04:hover,
+dt#music-bg-05:hover,
+dt#music-bg-06:hover,
+dt#music-bg-07:hover,
+dt#music-bg-08:hover,
+dt#music-bg-09:hover {
+    background-size:105px 105px;
+}
+.container .music dl dt span {
+    display:inline-block;
+    width:22px;
+    height:22px;
+    line-height:17px;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    border:1px solid deepskyblue;
+    border-radius:50%;
+    background-color:rgba(0,0,0,0.45);
+}
+.container .music dl dt span:hover {
+    cursor:pointer;
+    background-color:rgba(0,0,0,0.65);
+}
+.container .music dl dt span.pause {
+    position:relative;
+    top:36px;
+    left:36px;
+    background:rgba(255,255,255,0.85) url(../img/icons/pause.png) center center no-repeat;
+    -webkit-background-size:14px;
+    background-size:14px;
+}
+.container .music dl dt span.play {
+    display:none;
+    position:relative;
+    top:69px;
+    left:3px;
+    background:rgba(255,255,255,0.85) url(../img/icons/play.png) center center no-repeat;
+    -webkit-background-size:14px;
+    background-size:14px;
+}
+.container .music dl dd.desp {
+    display:block;
+    width:249px;
+    margin:8px 0 0 2px;
+    float:left;
+    padding-left:10px;
+    color:#333;
+    font-size:1em;
+    text-align:left;
+    font-weight:bold;
+}
+.container .music dl dd.music-source {
+    position:relative;
+    display:block;
+    width:250px;
+    height:70px;
+    margin-left:100px;
+    top:-20px;
+    clear:both;
+}
+.container .music dl dd.music-source div.play-bg{
+    width:0;
+    height:4px;
+    margin-top:20px;
+    background-color:lightblue;
+    border-radius:2px;
+}
+div.play-progress {
+    width:0;
+    height:4px;
+    background-color:deepskyblue;
+    border-radius:2px;
+}
+
+/***** player lists sidebar style *****/
+div#song-player .song-list{
+    display:block;
+    height:500px;
+    width:364px;
+    margin-right:25px;
+    padding:0;
+    border-radius:5px;
+    background-color:#eee;
+    box-shadow:0 0 3px #222;
+}
+div#song-player .list-header {
+    width:100%;
+    height:40px;
+    border-bottom:1px solid gray;
+}
+div#song-player .list-header span{
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    display:block;
+    float:left;
+}
+div#song-player .list-header-btn {
+    width:25%;
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+}
+div#song-player .list-header-btn:hover{
+    color:rgb(255,153,6);
+    font-weight:bold;
+}
+div#song-player #list-header-list {
+    width:50%;
+}
+div#song-player .list-header-btn:hover {
+    cursor:pointer;
+}
+.song-list ul {
+    height:455px;
+    overflow:hidden;
+}
+.song-list ul li {
+    padding-left:10px;
+    height:38px;
+    line-height:40px;
+    border-bottom:1px solid gray;
+}
+.song-list ul li:hover {
+    background-color:deepskyblue;
+}
+.song-list ul li:hover span{
+    color:#fff;
+}
+.song-list ul li span.delete-from-list {
+    display:inline-block;
+    position:absolute;
+    height:40px;
+    width:40px;
+    line-height:40px;
+    right:5px;
+    background:transparent url(../img/icons/delete-black.png) center center no-repeat;
+    -webkit-background-size:20px;
+    background-size:20px;
+}
+.song-list ul li span.delete-from-list:hover{
+    cursor:pointer;
+    color:#fc0;
+    background:transparent url(../img/icons/delete-yellow.png) center center no-repeat;
+    -webkit-background-size:20px;
+    background-size:20px;
+}
+.song-list ul li.list-current {
+    padding-left:30px;
+    color:#fff;
+    background:deepskyblue url(../img/icons/audio-white.png) no-repeat 10px 12px;
+}
+.song-list ul li.list-current:hover {
+    background-color:deepskyblue;
+}
+/***** player content style *****/
+.player-content {
+    display:block;
+    height:500px;
+    width:749px;
+    min-width:725px;
+    text-align:center;
+    background-color:#eee;
+    border-radius:3px;
+    box-shadow:0 0 3px #333;
+}
+.player-content .player-header{
+    height:50px;
+    line-height:20px;
+    padding-top:5px;
+    border-bottom:1px solid gray;
+    font-weight:bold;
+}
+.player-content #player-lyric{
+    height:400px;
+    overflow:hidden;
+}
+.player-content .player-footer {
+    width:90%;
+    height:50px;
+    margin:0 auto;
+    border-top:3px solid gray;
+}
+.player-content .player-footer #audio-current-time {
+    position:absolute;
+    left:14px;
+    top:441px;
+}
+.player-content .player-footer #audio-total-time {
+    position:absolute;
+    right:14px;
+    top:441px;
+}
+.player-content .player-footer .player-progress-bar {
+    position:relative;
+    top:-3px;
+    height:3px;
+    width:100%;
+    background-color:deepskyblue;
+    text-align:right;
+}
+.player-progress-bar span {
+    position: relative;
+    top: -10px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid deepskyblue;
+    background-color: #fff;
+}
+.player-footer .controller{
+    height:44px;
+    line-height:44px;
+}
+.player-footer .controller div{
+    float:left;
+}
+.player-footer .controller div span {
+    display:inline-block;
+    width:36px;
+    height:36px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    cursor:pointer;
+}
+.player-footer .like-this{
+    width:20%;
+    text-align:left;
+}
+.player-footer .player-main-control {
+    width:60%;
+}
+.player-footer .loop-mode {
+    width: 20%;
+    text-align: right;
+}
+.player-footer .like-this span{
+    background:transparent url(../img/icons/like-blue.png) center center no-repeat;
+    -webkit-background-size:24px;
+    background-size:24px;
+}
+.player-footer .like-this span:hover{
+    background:transparent url(../img/icons/like-red.png) center center no-repeat;
+    -webkit-background-size:24px;
+    background-size:24px;
+}
+.player-footer .player-main-control span.play-or-pause{
+    margin: 0 25px 0 25px;
+    border:2px solid deepskyblue;
+    background:transparent url(../img/icons/pause.png) center center no-repeat;
+    -webkit-background-size:24px;
+    background-size:24px;
+}
+.player-footer .player-main-control span.pausing {
+    background:transparent url(../img/icons/play.png) center center no-repeat;
+    -webkit-background-size:24px;
+    background-size:24px;
+}
+span.change-song {
+    width: 32px;
+    height: 32px;
+    border: 2px solid lightblue;
+    background: transparent url(../img/icons/pre_next.png) center center no-repeat;
+    -webkit-background-size: 20px;
+    background-size: 20px;
+}
+span.previous {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.player-footer .loop-mode span{
+    background: transparent url(../img/icons/single-loop.png) center center no-repeat;
+    -webkit-background-size:24px;
+    background-size:24px;
+}
+/***** album style *****/
+#album {
+    margin:0 auto;
+}
+
+#album .album-group {
+    width:200px;
+    margin:0 0 25px 35px;
+    border-radius:4px;
+    text-align:center;
+    font-weight:bold;
+    overflow:hidden;
+    float:left;
+}
+#album .album-group.group-01 {
+    margin-left:0;
+}
+#album .album-group .album-list {
+    height:200px;
+}
+#album .album-group img{
+    width:200px;
+    height:200px;
+}
+#album .album-group .album-list:hover+.album-title{
+    background-color:lightblue;
+}
+#album .album-group .album-list:hover .icon-group {
+    left:140px;
+}
+#album .album-title {
+    height:40px;
+    line-height:40px;
+    background-color:#ccc;
+    font-size:18px;
+    -webkit-border-radius:0 4px 4px 0;
+    -moz-border-radius:0 4px 4px 0;
+    border-radius:0 0 4px 4px;
+    -webkit-transition: all 0.3s linear,color 0.5s linear;
+    -moz-transition:all 0.3s linear,color 0.5s linear;
+    -o-transition: all 0.3s linear,color 0.5s linear;
+    transition: all 0.3s linear,color 0.5s linear;
+}
+#album .album-title:hover{
+    color:#fff;
+    background-color:deepskyblue;
+}
+#album .icon-group {
+    position:relative;
+    left:200px;
+    top:-200px;
+    width:60px;
+    height:200px;
+    padding-top:33%;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+#album .icon-group span {
+    display:block;
+    width:22px;
+    height:22px;
+    line-height:22px;
+    margin:0 auto;
+    border:1px solid #ccc;
+    color:#ccc;
+    border-radius:50%;
+}
+#album .icon-group span:hover {
+    cursor:pointer;
+    text-decoration:none;
+    color:deepskyblue;
+    border-color:deepskyblue;
+}
+#album .icon-group span.album-add-to-list{
+    line-height:16px;
+    margin-bottom:50%;
+    background:transparent url(../img/icons/details-gray.png) center center no-repeat;
+    -webkit-background-size:14px;
+    background-size:14px;
+}
+#album .icon-group span.album-add-to-list:hover {
+    background:transparent url(../img/icons/details-blue.png) center center no-repeat;
+    -webkit-background-size:14px;
+    background-size:14px;
+}
+#album .icon-group span.album-like {
+    background:transparent url(../img/icons/like-gray.png) center center no-repeat;
+    -webkit-background-size:14px;
+    background-size:14px;
+}
+#album .icon-group span.album-like:hover {
+    background:transparent url(../img/icons/like-blue.png) center center no-repeat;
+    -webkit-background-size:14px;
+    background-size:14px;
+}
+#album .album-list-detail {
+    position:relative;
+    top:-400px;
+    left:200px;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background-color:rgba(0,0,0,0.5);
+    color:#fff;
+    text-align:left;
+    text-indent:1em;
+}
+#album .album-list-detail ul {
+    position:absolute;
+    right:-17px;
+    width:110%;
+    height:100%;
+    overflow-y:scroll;
+}
+#album .list-hide {
+    position:relative;
+    left:180px;
+    width:20px;
+    height:100%;
+    background:rgba(50,50,50,1) url(../img/icons/right-arrow.png) center center no-repeat;
+    -webkit-background-size:18px;
+    background-size:18px;
+}
+#album .list-hide:hover {
+    background:rgba(75,75,75,1) url(../img/icons/right-arrow-yellow.png) center center no-repeat;
+    -webkit-background-size:18px;
+    background-size:18px;
+    cursor:pointer;
+}
+#album .album-list-detail ul::-webkit-scrollbar {
+    display:none;
+}
+#album .album-list-detail ul li {
+    height:35px;
+    line-height:35px;
+    border-bottom:1px solid grey;
+}
+#album .album-list-detail ul li:hover {
+    background-color:rgb(255,153,6);
+}
+#album .album-list-detail ul li span {
+    position:relative;
+    top:2px;
+    display:inline-block;
+    height:16px;
+    width:16px;
+    border:1px solid rgb(204,204,204);
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background-color:transparent;
+}
+#album .album-list-detail ul li span:hover {
+    background-color:#fff;
+    border:1px solid #fff;
+    cursor:pointer;
+}
+#album .album-list-detail ul li span.list-detail-like {
+    left:26px;
+    background:url(../img/icons/like-gray.png) center center no-repeat;
+    -webkit-background-size:10px;
+    background-size:10px;
+}
+#album .album-list-detail ul li span.list-detail-like:hover {
+    left:26px;
+    background:#fff url(../img/icons/like-blue.png) center center no-repeat;
+    -webkit-background-size:10px;
+    background-size:10px;
+}
+#album .album-list-detail ul li span.list-detail-delete {
+    left:30px;
+    background:url(../img/icons/delete-grey.png) center center no-repeat;
+    -webkit-background-size:10px;
+    background-size:10px;
+}
+#album .album-list-detail ul li span.list-detail-delete:hover {
+    background:#fff url(../img/icons/delete-black.png) center center no-repeat;
+    -webkit-background-size:10px;
+    background-size:10px;
+}
+.album-icon-group-hide {
+    left:-60px;
+    -webkit-animation:leftMoveIconGroup 1s ease-out;
+    -o-animation:leftMoveIconGroup 1s ease-out;
+    animation:leftMoveIconGroup 1s ease-out;
+}
+.album-icon-group-show {
+    display:block;
+    left:0;
+    -webkit-animation:rightMoveIconGroup 1s ease-out;
+    -o-animation:rightMoveIconGroup 1s ease-out;
+    animation:rightMoveIconGroup 1s ease-out;
+}
+.album-detail-list-show {
+    -webkit-animation:leftMoveDetailList 1s ease-out;
+    -o-animation:leftMoveDetailList 1s ease-out;
+    animation:leftMoveDetailList 1s ease-out;
+}
+.album-detail-list-hide {
+    -webkit-animation:rightMoveDetailList 1s ease-out;
+    -o-animation:rightMoveDetailList 1s ease-out;
+    animation:rightMoveDetailList 1s ease-out;
+}
+@keyframes leftMoveIconGroup {
+    from {
+        left:140px;
+    }
+    to {
+        left:-60px;
+    }
+}
+@keyframes rightMoveIconGroup {
+    from {
+        left:-60px;
+    }
+    to {
+        left:200px;
+    }
+}
+@keyframes leftMoveDetailList {
+    from {
+        left:200px;
+    }
+    to {
+        left:0;
+    }
+}
+@keyframes rightMoveDetailList {
+    from {
+        left:0;
+    }
+    to {
+        left:260px;
+    }
+}
+/***** likes style *****/
+#likes {
+    position:fixed;
+    bottom:35px;
+    height:78px;
+    width:472px;
+    min-width:472px;
+    -webkit-border-radius:0 39px 39px 0;
+    -moz-border-radius:0 39px 39px 0;
+    border-radius:0 39px 39px 0;
+    background-color:rgb(255,153,6);
+    -webkit-box-shadow: 0 0 3px rgba(50,50,50,0.75);
+    -moz-box-shadow: 0 0 3px rgba(50,50,50,0.75);
+    box-shadow: 0 0 3px rgba(50,50,50,0.75);
+    -webkit-transition: all 0.55s ease-out;
+    -moz-transition: all 0.55s ease-out;
+    -o-transition: all 0.55s ease-out;
+    transition: all 0.55s ease-out;
+}
+#likes.unfixed {
+    left:-385px;
+}
+#likes.unfixed:hover {
+    left:0;
+}
+#likes.fixed {
+    left:0;
+}
+#likes div.decoration {
+    height:78px;
+    width:40px;
+    float:left;
+}
+#likes div.decoration div.upper-decoration {
+    position:absolute;
+    width:120px;
+    height:20px;
+    top:-20px;
+    left:10px;
+    background:transparent url(../img/icons/favorite-bar-lock-bg.png) center center no-repeat;
+}
+#likes div.upper-decoration span {
+    position:relative;
+    display:inline-block;
+    width:18px;
+    height:18px;
+    top:1px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background-size:20px;
+    background-color:transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#likes div.upper-decoration span:hover {
+    cursor:pointer;
+}
+#likes div.upper-decoration span.lock-setting {
+    left:32px;
+}
+#likes div.upper-decoration span.details {
+    left:60px;
+}
+#likes div.upper-decoration span.locked {
+    background-image: url(../img/icons/locked-white.png);
+}
+#likes div.upper-decoration span.locked:hover {
+    background-image: url(../img/icons/locked-blue.png);
+}
+#likes div.upper-decoration span.unlocked {
+    background-image: url(../img/icons/unlocked-white.png);
+}
+#likes div.upper-decoration span.unlocked:hover {
+    background-image: url(../img/icons/unlocked-blue.png);
+}
+#likes div.upper-decoration span.details {
+    background-image: url(../img/icons/likes-details-white.png);
+}
+#likes div.upper-decoration span.details:hover {
+    background-image: url(../img/icons/likes-details-blue.png);
+}
+#likes .decoration .dot {
+    width:50%;
+    height:25%;
+    margin-top:75%;
+    margin-left:25%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    border:4px solid #ccc;
+    background-color:#fff;
+}
+.detail-container {
+    position:absolute;
+    top:-335px;
+    left:100px;
+    width:250px;
+    height:320px;
+    overflow-y:scroll;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    background-color:rgba(0,0,0,0.8);
+    color:#fff;
+}
+.container-show {
+    -webkit-animation:showFavoriteListModel 0.5s linear;
+    -o-animation:showFavoriteListModel 0.5s linear;
+    animation:showFavoriteListModel 0.5s linear;
+}
+.container-hide {
+    opacity:0;
+    width:0;
+    height:0;
+    -webkit-animation:hideFavoriteListModel 0.35s linear;
+    -o-animation:hideFavoriteListModel 0.35s linear;
+    animation:hideFavoriteListModel 0.35s linear;
+}
+.detail-container .list-header{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    border-bottom:1px solid gray;
+}
+.detail-container .list-header span {
+    display:inline-block;
+}
+.detail-container .list-header span:last-child {
+    position:absolute;
+    right:15px;
+}
+.detail-container .list-header span:last-child:hover {
+    cursor:pointer;
+    font-weight:bold;
+    color:rgb(255,153,6);
+}
+.detail-container .list-header span:first-child {
+    padding-left:10px;
+}
+.detail-container ul li {
+    padding-left:10px;
+    height:38px;
+    line-height:40px;
+    border-bottom:1px solid gray;
+}
+.detail-container ul li:hover {
+    background-color:rgb(255,153,6);
+}
+.detail-container ul li:hover span{
+    color:#fff;
+}
+.detail-container ul li span.delete-from-list {
+    display:inline-block;
+    position:absolute;
+    height:40px;
+    width:40px;
+    line-height:40px;
+    right:5px;
+    background:transparent url(../img/icons/delete-black.png) center center no-repeat;
+    -webkit-background-size:20px;
+    background-size:20px;
+}
+.detail-container ul li span.delete-from-list:hover{
+    cursor:pointer;
+    color:#fc0;
+    background:transparent url(../img/icons/delete-blue.png) center center no-repeat;
+    -webkit-background-size:20px;
+    background-size:20px;
+}
+.detail-container ul li.list-current {
+    padding-left:30px;
+    color:#fff;
+    background:rgb(255,153,6) url(../img/icons/audio-white.png) no-repeat 10px 12px;
+}
+.detail-container ul li.list-current:hover {
+    background-color:rgb(255,153,6);
+}
+#likes .likes-main {
+    width:210px;
+    min-width:210px;
+    height:78px;
+    float:left;
+    padding:15px 0 0 20px;
+    color:#fff;
+    font-size:16px;
+}
+#likes .likes-main div {
+    height:24px;
+    line-height:24px;
+}
+#likes .likes-main div.like-title {
+    font-size:20px;
+    font-weight:bold;
+}
+#likes .likes-control {
+    height:40px;
+    margin-top:19px;
+    width: 135px;
+    float:left;
+    border-left:2px dotted #fff;
+}
+#likes .likes-control span {
+    display:inline-block;
+    width:40px;
+    height:40px;
+    margin:0 0 0 20px;
+    border:2px solid #fff;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color:rgba(255,255,255,0.65);
+    -webkit-background-size:25px;
+    background-size:25px;
+}
+#likes .likes-control span:hover {
+    background-color:rgba(255,255,255,1);
+    cursor:pointer;
+}
+#likes .likes-control span.playing {
+    background-image:url(../img/icons/play.png);
+}
+#likes .likes-control span.pausing {
+    background-image:url(../img/icons/pause.png);
+}
+#likes .likes-control span.next {
+    background-image:url(../img/icons/pre_next.png);
+}
+#likes .likes-circleProgress{
+    position: relative;
+    left: 394px;
+    top:1px;
+    width:70px;
+    height:70px;
+    border:3px solid transparent;
+    box-sizing: content-box;
+}
+#likes .wrapper{
+    width: 35px;
+    height: 70px;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+#likes .right{
+    right:0;
+}
+#likes .left{
+    left:0;
+}
+#likes .circleProgress{
+    width: 70px;
+    height: 70px;
+    border:5px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:0;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+#likes .right-circle{
+    border-top:5px solid deepskyblue;
+    border-right:5px solid deepskyblue;
+    right:0;
+}
+#likes .left-circle{
+    border-bottom:5px solid deepskyblue;
+    border-left:5px solid deepskyblue;
+    left:0;
+}
+#likes .likes-img {
+    width:62px;
+    height:62px;
+    position:absolute;
+    left:4px;
+    top:4px;
+    background:rgba(255,255,255,0.65) url(../img/icons/like-blue.png) center center no-repeat;
+    background-size:40px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+#likes .likes-img:hover {
+    background-color:rgba(255,255,255,1);
+}
+.like-animation {
+    -webkit-animation:addLikeAnimation 1.2s linear;
+    -o-animation:addLikeAnimation 1.2s linear;
+    animation:addLikeAnimation 1.2s linear;
+}
+
+@keyframes showFullLikesBar {
+    0% {
+        left:-385px;
+    }
+    25% {
+        left:-150px;
+    }
+    100% {
+        left:0;
+    }
+}
+@keyframes hideFavoriteListModel {
+    0% {
+        height:320px;
+        width:250px;
+        top:-335px;
+        opacity: 1;
+    }
+    100% {
+        height:0;
+        width:0;
+        top:0;
+        opacity: 0;
+    }
+}
+@keyframes showFavoriteListModel {
+    0% {
+        height:0;
+        width:0;
+        top:0;
+        opacity:0;
+    }
+    100% {
+        height:320px;
+        width:250px;
+        top:-335px;
+        opacity:1;
+    }
+}
+@keyframes addLikeAnimation {
+    0% {
+        width:22px;
+        height:22px;
+        position:fixed;
+        left:0;
+        top:0;
+    }
+    15% {
+        left:0;
+        top:0;
+    }
+    85% {
+        opacity:1;
+    }
+    100% {
+        width:62px;
+        height:62px;
+        position:fixed;
+        left:0;
+        top:0;
+        background-size:40px;
+        opacity:0.75;
+    }
+}
+
+/***** loading or refreshing style *****/
+.load-rotate {
+    -webkit-animation:loadRotate 0.75s linear;
+    -o-animation:loadRotate 0.75s linear;
+    animation:loadRotate 0.75s linear;
+}
+@keyframes loadRotate {
+    from {
+        -webkit-transform: rotateY(90deg);
+        -moz-transform: rotateY(90deg);
+        -ms-transform: rotateY(90deg);
+        -o-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+        opacity: 0;
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
+        -ms-transform: rotateY(360deg);
+        -o-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}

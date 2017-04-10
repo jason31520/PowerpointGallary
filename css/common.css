@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(120,120,120);
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "微软雅黑", sans-serif;
+}
+ul,ol {
+    list-style:none;
+}
+
+/***** 导航条样式 *****/
+.template-navbar {
+    height:50px;
+    min-width:400px;
+    background-color: rgb(50,50,50);
+    -webkit-box-shadow: 0 3px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 3px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 3px 2px rgba(0,0,0,0.4);
+}
+.template-nav li {
+    height:50px;
+    display: inline-block;
+    width: 120px;
+    padding: 4px;
+    text-align:center;
+}
+.template-nav:first-child {
+    margin-left:30px;
+}
+.template-nav li:hover {
+    background-color: rgb(20,20,20);
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    -webkit-box-shadow: inset 0 0 2px black;
+    -moz-box-shadow: inset 0 0 2px black;
+    box-shadow: inset 0 0 2px black;
+}
+.template-nav li a {
+    display:block;
+    height:40px;
+    line-height:40px;
+    width:120px;
+    color:#fc0;
+    font-size:18px;
+    font-weight:bold;
+    text-decoration: none;
+}
+.template-nav li a:hover {
+    color:rgb(255,153,6);
+}
+li.nav-current {
+    background-color:#fc0;
+}
+li.nav-current:hover {
+    background-color:#fc0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+li.nav-current a {
+    color: rgb(50,50,50);
+}
+li.nav-current a:hover {
+    color: rgb(50,50,50);
+}
+
+/***** 导航条隐藏与显示动画 *****/
+@keyframes hideNavbar {
+    from {
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        -o-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+    to {
+        -webkit-transform: translate(0,-50);
+        -moz-transform: translate(0,-50);
+        -ms-transform: translate(0,-50);
+        -o-transform: translate(0,-50);
+        transform: translate(0,-50);
+    }
+}
+@keyframes showNavbar {
+    from {
+        -webkit-transform: translate(0,-50);
+        -moz-transform: translate(0,-50);
+        -ms-transform: translate(0,-50);
+        -o-transform: translate(0,-50);
+        transform: translate(0,-50);
+    }
+    to {
+        -webkit-transform: translate(0,0);
+        -moz-transform: translate(0,0);
+        -ms-transform: translate(0,0);
+        -o-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+.nav-hide {
+    -webkit-animation-name: hideNavbar;
+    -moz-animation-name: hideNavbar;
+    -o-animation-name: hideNavbar;
+    animation-name: hideNavbar;
+    -webkit-animation-duration: 0.75s;
+    -moz-animation-duration: 0.75s;
+    -o-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+}
+.nav-show {
+    -webkit-animation-name: showNavbar;
+    -moz-animation-name: showNavbar;
+    -o-animation-name: showNavbar;
+    animation-name: showNavbar;
+    -webkit-animation-duration: 0.75s;
+    -moz-animation-duration: 0.75s;
+    -o-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+}
+
+#scroll-top {
+    position:fixed;
+    right:10px;
+    bottom:15px;
+    width:40px;
+    height:40px;
+    text-align:center;
+    background-color:rgba(0,0,0,0.65);
+    border:1px solid rgba(255,255,255,0.65);
+}
+/**   Scroll to top style  **/
+#scroll-top:hover {
+    cursor:pointer;
+    border:1px solid rgba(255,255,255,0.95);
+    background-color:rgba(0,0,0,0.85);
+}
+#scroll-top img {
+    margin-top:10px;
+}
+.scroll-top-hide {
+    display:none;
+}
